@@ -28,16 +28,16 @@ namespace POO
             string mensajeVacuna;
 
             mensajeVacuna = estabaVacunado
-                ? "ya se encontraba vacunado."
-                : "no estaba vacunado, lo vacunamos por ti.";
+                ? "Ya está vacunado"
+                : "No estaba vacunado, lo vacunamos por ti";
 
             // mensajeVacuna = estabaVacunado switch {
-            //     true => "Ya se encuentra vacunado.",
-            //     false => "Tu perro no estaba vacunado, ahora sí."
+            //     true => "Ya está vacunado",
+            //     false => "No estaba vacunado, lo vacunamos por ti"
             // };
 
-            var texto = string.Format("Tu perro se llama {0},\n  su raza es {1},\n  su color es {2},\n  su tamaño es {3},\n  {4}",
-                Nombre, Raza, Color, Tamaño, mensajeVacuna);
+            var texto = $"{Nombre} es un {Raza} {Color}, de tamaño {Tamaño}; {mensajeVacuna}."; // Interpolación de texto
+            // var texto = string.Format("{0} es un {1} {2}, de tamaño {3}; {4}.", Nombre, Raza, Color, Tamaño, mensajeVacuna); // Lo que hace la interpolación de texto detrás de bambalinas
 
             return texto;
         }
