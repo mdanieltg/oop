@@ -1,4 +1,4 @@
-namespace POO
+namespace ObjectOrientedProgramming.AbstractionAndEncapsulation
 {
     public class Vet
     {
