@@ -1,4 +1,4 @@
-namespace ObjectOrientedProgramming.AbstractionAndEncapsulation
+namespace AbstractionAndEncapsulation
 {
     public class Vet
     {

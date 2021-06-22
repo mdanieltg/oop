@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ObjectOrientedProgramming.AbstractionAndEncapsulation
+namespace AbstractionAndEncapsulation
 {
     internal class Program
     {
@@ -16,8 +16,8 @@ namespace ObjectOrientedProgramming.AbstractionAndEncapsulation
 
             Console.WriteLine();
             Console.Write("¿Cuántos perros tienes? ");
-            int cantidad;
-            int.TryParse(Console.ReadLine(), out cantidad);
+            //int cantidad;
+            int.TryParse(Console.ReadLine(), out int cantidad);
 
             var perros = new Perro[cantidad];
 
@@ -25,17 +25,18 @@ namespace ObjectOrientedProgramming.AbstractionAndEncapsulation
             while (n < cantidad)
             {
                 Console.WriteLine("\nDatos del perro #{0}.", n + 1);
+                
                 Console.Write(" Nombre del perro: ");
-                var nombre = Console.ReadLine();
+                var nombre = ValidadorDeEntrada.Leer(true);
 
-                Console.Write(" Raza de {0}  : ", nombre);
-                var raza = Console.ReadLine();
+                Console.Write(" Raza de {0}: ", nombre);
+                var raza = ValidadorDeEntrada.Leer(true);
 
-                Console.Write(" Color de {0} : ", nombre);
-                var color = Console.ReadLine();
+                Console.Write(" Color de {0}: ", nombre);   
+                var color = ValidadorDeEntrada.Leer().ToLower();
 
                 Console.Write(" Tamaño de {0}: ", nombre);
-                var tamaño = Console.ReadLine();
+                var tamaño = ValidadorDeEntrada.Leer();
 
                 Console.Write(" ¿Está {0} vacunado? (s/n): ", nombre);
                 var vacunado = Console.ReadKey().KeyChar == 's';

@@ -1,6 +1,6 @@
 using System;
 
-namespace ObjectOrientedProgramming.AbstractionAndEncapsulation
+namespace AbstractionAndEncapsulation
 {
     public class Perro
     {
